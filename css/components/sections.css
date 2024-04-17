@@ -1,0 +1,31 @@
+.section-title{
+    display: inline-flex;
+    width: 100%;
+    /* 60px */
+    margin-bottom: 4rem; 
+    h2{
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--text-black-900);
+        position: relative;
+        padding-bottom: 0.5rem;
+    }
+    h2::before{
+            content: '';
+            position: absolute;
+            width: 20vh;
+            height: 4px;
+            background-color: var(--text-red-700);
+            bottom: 1.2vh;
+            left: 0;
+        }
+    h2::after {
+        content: '';
+        position: absolute;
+        width: 14vh;
+        height: 4px;
+        background-color: var(--text-red-700);
+        bottom: 0;
+        left: 0;
+    }
+}

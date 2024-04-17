@@ -1,0 +1,199 @@
+.skills-info{
+/* height: 300px; */
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+    grid-template-columns: auto auto auto;
+}
+
+ul.skills {
+    width: 100%;
+    position: relative;
+    padding: 25px 0;
+}
+/* START coloca a escrita skils */
+ul.skills:before {
+    content: "skills";
+    text-transform: uppercase;
+    position: absolute;
+    top: -8px;
+    height: 50px;
+    color: var(--text-red-700);
+    font-weight: 600;
+    width: 100%;
+    left: 0;
+    /* padding: 15px 15px 0 0; */
+    text-align: left;
+}
+
+
+/* skills */
+ul.skills1:before {
+    content: "Backend";
+}
+
+ul.skills2:before {
+    content: "Cloud";
+}
+
+ul.skills3:before {
+    content: "Frontend";
+}
+/*  END SKILLS  */
+
+/* START load */
+ul.skills li {
+    margin: 0 0 5px 0;
+    list-style: none;
+    padding: 20px 0;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 15px;
+    span {
+        color: var(--text-black-700);
+        font-weight: 600;
+    }
+}
+/* criando load bar */
+ul.skills li:before {
+    content: "";
+    position: absolute;
+    background: #1c1c1c;
+    height: 16px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    border-radius: 2px;
+    border: 1px solid #111;
+    border-color: #111 #323232 #323232 #111;
+    --track: #2292dd40;
+    /* prenchendo o load */
+    background: linear-gradient(90deg,
+            var(--track) calc(calc(var(--per) * 1%) + 4px),
+            #5e5e5e calc(calc(var(--per) * 1%) + 4px));
+}
+/* amimacao pra encher o load */
+/* ul.skills li:after {
+	content: "";
+	height: 11px;
+	margin: 0 0 2px 0;
+	background: #2187e7;
+	position: absolute;
+	box-shadow: 0px 0px 10px 1px #00c6ff66;
+	left: 3px;
+	width: 0%;
+	bottom: 0;
+	transition: all var(--dur) ease 0s;
+	animation: start 1s ease 0s 2 alternate;
+} */
+/* END load */
+
+
+/* PORCENTAGEM */
+/* START SETA */
+ul.skills li span:before {
+    position: absolute;
+    right: -25px;
+    top: 47px;
+    transition: var(--t1);
+    content: "";
+    opacity: 1;
+    border: 7px solid #fff0;
+}
+
+ul.skills li:hover span:before{
+    transition: var(--t1);
+    right: calc(calc(calc(100 - var(--per)) * 1%) - 12px);
+    opacity: 1;
+    border-right-color: #2187e7;
+}
+
+/* END SETA */
+ul.skills li span:after {
+    color:white;
+    position: absolute;
+    right: -40px;
+    top: 38px;
+    opacity: 0;
+    transition: var(--t1);
+    counter-reset: percent var(--per);
+    /*content: counter(percent) "%";*/
+    content: counter(percent);
+    /* color: var(--b2); */
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+ul.skills li:hover span:after {
+    right: calc(calc(85 - var(--per)) * 1%);
+    right: calc(calc(calc(100 - var(--per)) * 1%) - 40px);
+    opacity: 1;
+    background: var(--c1);
+}
+
+/* ul.skills2 li:hover span:after {
+    background: #9acd32;
+}
+
+ul.skills3 li:hover span:after {
+    background: #ff4500;
+} */
+/* END PORCENTAGEM */
+
+/*********************/
+/*** SKILLS VALUES ***/
+/*********************/
+
+ul.skills li.sk-nodejs {
+    --per: 90;
+}
+
+ul.skills li.sk-golang {
+    --per: 60;
+}
+
+ul.skills li.sk-sql {
+    --per: 80;
+}
+
+ul.skills li.sk-mysql {
+    --per: 80;
+}
+
+ul.skills li.sk-mongodb {
+    --per: 75;
+}
+
+ul.skills li.sk-docker {
+    --per: 80;
+}
+
+ul.skills li.sk-jenkins {
+    --per: 60;
+}
+
+ul.skills li.sk-aws {
+    --per: 70;
+}
+
+ul.skills li.sk-serverless {
+    --per: 80;
+}
+
+ul.skills li.sk-html {
+    --per: 75;
+}
+
+ul.skills li.sk-css {
+    --per: 60;
+}
+
+ul.skills li.sk-javascript {
+    --per: 90;
+}
+
+ul.skills li.sk-angular {
+    --per: 70;
+}

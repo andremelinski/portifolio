@@ -1,0 +1,49 @@
+.about{
+    .about-info{
+        display: inline-flex;
+        width: 100%;
+        .about-text{
+            h3{
+                font-size: 24px;
+                margin-bottom: 15px;
+                font-weight: 700;
+                color: var(--text-black-900);
+            
+                span{
+                    color: var(--text-red-700)
+                }
+            }
+            p{
+                font-size: 16px;
+                color: var(--text-red-700);
+                line-height: 25px;
+            }
+        }
+    }
+    .personal-info{
+        width: calc(60% - (.5em + 6px));
+        float: left;
+        min-height: 400px;
+        margin-top: 1em;
+        .info-item{
+                p{ 
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: --var(--text-black-900);
+                    border-bottom: 1px solid #e8dfec;
+                    padding: 5px 15px;
+                }
+                span{
+                    font-weight: 400;
+                    color: --var(--text-black-700);
+                }
+            }
+    }
+    .skills {
+    width: calc(40% - (.5em + 6px));
+    float: right;
+    min-height: 400px;
+    margin-top: 1em;
+    background: gold;
+    }
+}

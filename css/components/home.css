@@ -1,0 +1,45 @@
+.home {
+    min-width: 100vh;
+    display: flex;
+    color: #302e4d;
+    .home-info{
+        flex: 0 0 60%;
+        max-width: 60%;
+        p {
+            padding-bottom: 1rem;
+            font-size: 20px;
+            color: #504e70;
+        }
+    }
+    .home-img{
+        flex: 0 0 40%;
+        max-width: 40%;
+        text-align: center;
+        /* position: relative; */
+        img{
+            width: 100%;
+            border-radius: 5px;
+            height: auto;
+            position: relative;
+        }
+    }
+    
+    h3.hello{
+        font-size: 28px;
+        margin: 15px 0;
+        span{
+            font-family: 'Clicker Script', cursive;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--text-red-700)
+        }
+    }
+    h3.profession {
+        font-size: 30px;
+        margin: 15px 0;
+        .typing {
+            color: var(--text-red-700)
+        }
+    }
+
+}

@@ -1,0 +1,203 @@
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-red-700: #ff3f04;
+    --text-black-700: #504e70;
+    --c1: #2187e7;
+    --b2: #222;
+    --w1: #fff;
+    --w2: #eee;
+    --t1: all 0.5s ease 0s;
+}
+@import url('<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">');
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height:1.5;
+    font-size: 16px;
+    font-family: 'Poppins' sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* font-family: var(--font-family); */
+}
+
+.hidden{
+    display: none !important;
+}
+
+::before,::after{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+.section{
+    background-color: #f2f2fc;
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+    .container {
+            /* max-width: 1100px; */
+            width: 100%;
+            margin: auto;
+            padding-top: 60px;
+            padding-bottom: 70px;
+
+        }
+}
+
+.main-content{
+    padding-left: 17rem;
+}
+
+.padd-15{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row{
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.aside{
+    width: 270px;
+    height: 100%;
+    background-color: #fdf9ff;
+    position: fixed;
+    padding: 30px;
+    /* left: 0;
+    top:0; */
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #e8dfec;
+    .logo{
+        position: absolute;
+        top: 50px;
+        font-size: 30px;
+        /* text-transform: capitalize; */
+        a {
+            color: #302e4d;
+            font-weight: 900;
+            padding: 15px 20px;
+            letter-spacing: 5px;
+            position: relative;
+            span{
+                font-family: 'Clicker Script', cursive;
+                font-size: 40px;
+            }
+        }
+        a::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-bottom: 5px solid red;
+            border-left: 5px solid red;
+            bottom: 0;
+            left: 0;
+        }
+        a::after{
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-top: 5px solid red;
+            border-right: 5px solid red;
+            top: 0;
+            right: 0;
+        }
+    }
+    .nav{
+        li{
+            margin-bottom: 20px;
+            display: block;
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+                color: #302e4d;
+                border-bottom: 1px solid #e8dfec;
+                padding: 5px 15px;
+                i{
+                        margin-right: 15px;
+                }
+
+            }
+            a.active{
+                color: var(--text-red-700);
+            }
+        }
+    }
+    .nav-toggler{
+        height: 40px;
+        width: 45px;
+        border: 1px solid #e8dfec;
+        cursor: pointer;
+        position: fixed;
+        left: 300px;
+        top: 20px;
+        border-radius: 5px;
+        background-color: #fdf9ff;
+        /* display: flex; */
+        display: none;
+        align-items: center;
+        justify-content: center;
+        span{
+            height: 2px;
+            width: 18px;
+            background-color: var(--text-red-700);
+            display: inline-block;
+            position: relative;
+        }
+        span::before{
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 18px;
+            background-color: var(--text-red-700);
+            bottom: 0;
+            top: -6px;
+        }
+        span::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 18px;
+            background-color: var(--text-red-700);
+            bottom: 0;
+            top: 6px;
+        }
+    }
+}
+
+a.btn {
+    font-weight: 500;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 40px;
+    color: white;
+    background-color: var(--text-red-700);
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+a.btn:hover{
+    transform: scale(1.05);
+}
